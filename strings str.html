@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script>
+function  str_slice(){
+    var tot_string=document.getElementById("a").value;
+    var start=document.getElementById("start").value;
+    var end=document.getElementById("end").value;
+    document.getElementById("string").innerHTML="Slice of a given string is:" +tot_string.slice(start,end);
+    document.getElementById("string").innerHTML=tot_string.slice(start);
+
+}
+function  str_substring(){
+    var tot=document.getElementById("a").value;
+    var first=document.getElementById("start").value;
+    var second=document.getElementById("end").value;
+    document.getElementById("string").innerHTML="Substring of a given string is:" +tot.substring(first,second);
+    document.getElementById("string").innerHTML=tot.substring(first);
+
+}
+function  str_substr(){
+    var tot=document.getElementById("a").value;
+    var start=document.getElementById("start").value;
+    var end=document.getElementById("end").value;
+    document.getElementById("string").innerHTML=" Sub str of a given string is:" + tot.substr(start,end);
+}
+    </script>
+</head>
+<center>
+
+    <body><br>
+        <div class="row"> 
+            <label>String:<input type="text" id="a"></label><br><br>
+        </div><br>
+        <div class="row">
+            <label>Start Position:<input type="text" id="start"></label>
+        </div><br>
+        <div class="row">
+            <label>End Position/Length:<input type="text" id="end"></label>
+        </div><br><br>
+        <div class="row">
+            <button type="button" class="btn btn-success" onclick="str_slice()">Slice</button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-warning" onclick="str_substring()">Sub String</button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-primary" onclick="str_substr()">Sub Str</button>&nbsp;&nbsp;
+        </div>
+        <div id="string"></div>
+    </body>
+</center>
+
+</html>

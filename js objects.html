@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script>
+        var man = { name: "Sri", full_Name: "Gaajula Sri", age: "30", eye_Color: "brown" }
+
+        function objectName() {
+            document.getElementById("demo").innerHTML = "Name is:" + man.name;
+        }
+        function objectFullName() {
+            document.getElementById("demo").innerHTML = "Full Name is:" + man.full_Name;
+        }
+        function objectAge() {
+            document.getElementById("demo").innerHTML = "Age is:" + man.age;
+
+        }
+        function objectEyecolor() {
+            document.getElementById("demo").innerHTML = "Eye color is:" + man.eye_Color;
+
+        }
+        function objectAall() {
+            document.getElementById("demo").innerHTML = "Name is:"+ man.name +"<br>"+ "Full Name is:" +man.full_Name +"<br>"+ "Age is: " + man.age +"<br>"+"Eye Color is: "+man.eye_Color;
+
+        }
+    </script>
+</head>
+<center>
+
+    <body><br><br>
+        <button type="button" class="btn btn-success" onclick="objectName()">Name</button>&nbsp;&nbsp;
+        <!-- <button type="button" class="btn btn-warning" onclick="objectFullName()">Full Name</button>&nbsp;&nbsp;
+        <button type="button" class="btn btn-primary" onclick="objectAge()">Age</button>&nbsp;&nbsp;
+        <button type="button" class="btn btn-danger" onclick="objectEyecolor()">Eye Color</button>&nbsp;&nbsp;
+        <button type="button" class="btn btn-default" onclick="objectAall()">All</button><br> -->
+        <div><br>
+            <p id="demo"></p>
+
+        </div>
+
+
+    </body>
+</center>
+
+</html>

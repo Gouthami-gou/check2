@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script>
+        function str_Concatenation(text) {
+            var str1 = document.getElementById("input1").value;
+            var str2 = document.getElementById("input2").value;
+            document.getElementById("show").innerHTML = str1.concat(" " + str2);
+        }
+    </script>
+    <center>
+
+<body><br><br>
+    ENTER TEXT<input type="text" id="input1"><br><br>
+    ENTER TEXT<input type="text" id="input2"><br><br>
+    <button type="button" onclick="str_Concatenation()" class="btn btn-success">Concat</button>
+
+    <div>
+        <p id="show"></p>
+    </div>
+</body>
+</center>
+</head>
+
+</html>

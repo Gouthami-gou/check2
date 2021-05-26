@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script>
+        function str_indexof() {
+            var tot_string = document.getElementById("str").value;
+            var text = document.getElementById("txt").value;
+            var t = tot_string.indexOf(text);
+            document.getElementById("string").innerHTML = t;
+        }
+        function str_Lastindexof() {
+            var tot_text = document.getElementById("str").value;
+            var entered_text = document.getElementById("txt").value;
+            var res = tot_text.lastIndexOf(entered_text);
+            document.getElementById("string").innerHTML = res;
+        }
+        function str_search() {
+            var search_string = document.getElementById("str").value;
+            var search_text = document.getElementById("txt").value;
+            var t = search_string.search(search_text);
+            document.getElementById("string").innerHTML = "Search Text:" + t;
+        }
+        function str_insearch() {
+            var search_string = document.getElementById("str").value;
+            var text = document.getElementById("txt").value;
+            var reg = "i";
+            var t = search_string.search(new RegExp(text,reg));
+            document.getElementById("string").innerHTML = t;
+        }
+        function str_convert(){
+            var full_str=document.getElementById("fulltext").value;
+            var str_old=document.getElementById("old").value;
+            var str_new=document.getElementById("n").value;
+            document.getElementById("replace").innerHTML="Replaced text is:"+ full_str.replace(str_old,str_new);
+
+        }
+        function str_split(){
+            var str_fulltxt=document.getElementById("fulltxt").value;
+            var str_txtsplit=document.getElementById("txtsplit").value;
+            document.getElementById("split").innerHTML="Output of Split Text is:" + str_fulltxt.split(str_txtsplit).join('');
+        }
+        function str_trim(){
+            var str_fulltxt=document.getElementById("fulltxt1").value;
+            document.getElementById("trim").innerHTML="Output of Trim Text is:" + str_fulltxt.trim();
+        }
+
+    </script>
+</head>
+<center>
+
+    <body><br>
+        <div class="row">
+            <label>String:<input type="text" id="str"></label><br><br>
+        </div><br>
+        <div class="row">
+            <label>Text:<input type="text" id="txt"></label>
+        </div><br>
+
+        <div class="row">
+            <button type="button" class="btn btn-success" onclick="str_indexof()">IndexOf</button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-warning" onclick="str_Lastindexof()">Last IndexOf</button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-primary" onclick="str_search()">Search</button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-primary" onclick="str_insearch()">Incase Search</button>&nbsp;&nbsp;
+
+        </div>
+        <div id="string"></div><br><br>
+        <div class="row">
+                <label>Enter Text:</label>   <input type="text" id="fulltext"><br><br>
+                <label>Old:</label>    <input type="text" id="old"><br><br>
+                <label>New:</label>   <input type="text" id="n"><br><br><br>
+            <button type="button" class="btn btn-success" onclick="str_convert()">Replace</button>
+            <div id="replace"></div>
+        </div><br><br>
+        <div class="row">
+            <label>Text:</label><input type="text" id="fulltxt"><br><br>
+            <label>Split Text:</label><input type="text" id="txtsplit"><br><br>
+            <button type="button" class="btn btn-success" onclick="str_split()">Split</button><br>
+
+            <div id="split"></div>
+        </div>
+        <div class="row">
+                <label>Text:</label><input type="text" id="fulltxt1"><br><br>
+                <button type="button" class="btn btn-success" onclick="str_trim()">Trim</button><br>
+                <div id="trim"></div>
+            </div>
+    </body>
+</center>
+
+</html>

@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script>
+        function convert_lowerCase(text) {
+            var strLCase = text.toLowerCase();
+            document.getElementById("dispText").innerHTML = strLCase;
+        }
+        function convert_upperCase(text) {
+            var strUCase = text.toUpperCase();
+            document.getElementById("dispText").innerHTML = strUCase;
+        }
+        function str_length(text) {
+            var strlength = document.getElementById("inputText").value;
+            document.getElementById("dispText").innerHTML = strlength.length;
+        }
+        function autocap(){
+            var str_auto=document.getElementById("inputText").value;
+            var str_split=str_auto.toLowerCase().split('');
+            for(var i=0;i<str_split.length;i++)
+            {
+                str_split[i]=str_split[i].charAt(0).toUpperCase()+str_split[i].substring(1);
+
+            }
+            document.getElementById("dispText").innerHTML="Auto Capital of a String :"+str_split.join('');
+        }
+        
+    </script>
+</head>
+
+<body>
+    <center>
+
+        <body><br><br>
+            <input type="text" id="inputText"><br><br>
+            <button type="button" value="Display in Lowercase" class="btn btn-success"
+                onclick="convert_lowerCase(inputText.value)">Lower</button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-warning"
+                onclick="convert_upperCase(inputText.value)">Upper</button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-primary"
+                onclick="str_length(inputText.value)">Length</button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-danger" onclick="capitalize_Words(inputText.value)">Auto
+                Capital</button>&nbsp;&nbsp;
+            <div>
+                <p id="dispText"></p>
+            </div>
+        </body>
+    </center>
+
+</html>
